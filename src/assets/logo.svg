@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1012 372" width="1012" height="372">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width: 35 } 
+		.shp1 { fill: #ffffff;stroke: #ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width: 35 } 
+	</style>
+	<path id="Layer 2" class="shp0" d="M359.6 337.85L359.6 34.15L512.55 186L664.4 34.15L663.31 337.85" />
+	<path id="Layer 3" class="shp0" d="M268 186L70 186" />
+	<path id="Layer 3 copy" class="shp0" d="M950 186L752 186" />
+	<path id="Layer 4" class="shp0" d="M512 186L512 332" />
+	<path id="Layer 5" class="shp0" d="M432 190L432 334.01" />
+	<path id="Layer 6" class="shp0" d="M590 191L590 333.23" />
+	<path id="Shape 1" class="shp1" d="M512.5 98.6C501.94 98.6 493.4 90.06 493.4 79.5C493.4 68.94 501.94 60.4 512.5 60.4C523.06 60.4 531.6 68.94 531.6 79.5C531.6 90.06 523.06 98.6 512.5 98.6Z" />
+</svg>
