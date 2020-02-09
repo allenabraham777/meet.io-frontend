@@ -10,7 +10,7 @@
       <div class="logo-wrapper">
         <img src="@/assets/logo.svg" class="logo">
       </div>
-      <form style="text-align:center;" action = "https://just-for-fun-shit.herokuapp.com/hello" method = "post" enctype="multipart/form-data">
+      <form style="text-align:center;" action = "https://just-for-fun-shit.herokuapp.com/hello/" method = "post" enctype="multipart/form-data">
         <div class="text-wrapper">
           <textarea class="identified-text" name="speech" v-model="speech" readonly></textarea>
         </div>
@@ -38,7 +38,6 @@ export default {
     },
     methods: {
         onSpeechReceived(speech) {
-            console.log('Reveived', speech);
             this.speech += speech;
         }
     }
