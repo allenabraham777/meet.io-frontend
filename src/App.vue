@@ -10,9 +10,10 @@
       <div class="logo-wrapper">
         <img src="@/assets/logo.svg" class="logo">
       </div>
-      <form style="text-align:center;" action = "https://just-for-fun-shit.herokuapp.com/hello/" method = "post" enctype="multipart/form-data">
+      <form style="text-align:center;" action = "https://just-for-fun-shit.herokuapp.com/hello" method = "post" enctype="multipart/form-data">
+      <!-- <form id="form" style="text-align:center;" action = "http://192.168.43.195:5000/hello" method = "POST" enctype="multipart/form-data"> -->
         <div class="text-wrapper">
-          <textarea class="identified-text" name="speech" v-model="speech" readonly></textarea>
+          <textarea id="speech" class="identified-text" name="speech" v-model="speech" readonly></textarea>
         </div>
         <div class="summerize-wrapper">
           <button type="submit" class="summerize-btn">Summerize</button>

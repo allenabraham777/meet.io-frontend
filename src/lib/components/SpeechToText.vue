@@ -49,9 +49,12 @@ export default {
             this.speechService.speak().subscribe(
               (result) => {
                 this.speech = result;
-                    this.$emit('speech', this.speech);
-                    if (result == 'end')
-                      this.isSpeaking = false;
+                if (result === 'end'){
+                  this.isSpeaking = false;
+                }
+                else{
+                  this.$emit('speech', this.speech);
+                }
                     // console.log('Result', result);
                 },
                 (error) => {
