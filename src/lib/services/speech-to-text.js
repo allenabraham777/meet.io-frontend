@@ -4,12 +4,14 @@
 import { Subject } from 'rxjs';
 
 const SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-
+let stop = 0;
 export default class SpeechToText {
     constructor() {
         this.recognition = new SpeechRecognition();
         this.result = 'created';
         this.resultSubject = new Subject();
+
+        this.recognition.continuous = true;
 
         this.recognition.lang = 'en-EN';
         this.recognition.interimResults = false;
@@ -26,7 +28,6 @@ export default class SpeechToText {
         };
 
         this.recognition.onspeechend = () => {
-            this.recognition.stop();
             console.log('Speech end');
             this.resultSubject.next('');
         };
@@ -40,13 +41,14 @@ export default class SpeechToText {
             this.resultSubject.error(`Error occurred in recognition: ${event.error}`);
         };
     }
-
     speak() {
         this.recognition.start();
-        return this.resultSubject;
+        if (stop === 0)
+            return this.resultSubject;
     }
     stopspeak() {
         this.recognition.stop();
-        this.resultSubject.next('');
+        this.resultSubject.next('end');
+        stop = 1;
     }
 }

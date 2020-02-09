@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <div class="mic-container">
-      <SpeechToText @speech="onSpeechReceived($event)"/>
+      <div class="meet-io">meet.io</div>
+      <div style="height: 70%;">
+        <SpeechToText @speech="onSpeechReceived($event)"/>
+      </div>
     </div>
     <div class="text-container">
       <div class="logo-wrapper">
@@ -36,13 +39,15 @@ export default {
     methods: {
         onSpeechReceived(speech) {
             console.log('Reveived', speech);
-            this.speech = speech;
+            this.speech += speech;
         }
     }
 };
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
   html {
     font-size: 62.5%;
   }
@@ -61,10 +66,18 @@ export default {
     width: 50%;
     height: 100vh;
     display: flex;
-    direction: column;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
+
+  .meet-io {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    margin-top: 1rem;
+    color: #173F5F;
+  }
+
   .text-container{
     width: 50%;
     display: flex;
@@ -86,6 +99,7 @@ export default {
     padding: 3rem;
     width: 40rem;
     height: 40rem;
+    text-align: justify;
     background: none;
     border: solid 2px #ffffff;
     color: #ffffff;

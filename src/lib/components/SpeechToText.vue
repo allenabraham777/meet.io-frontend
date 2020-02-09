@@ -50,7 +50,8 @@ export default {
               (result) => {
                 this.speech = result;
                     this.$emit('speech', this.speech);
-                    this.isSpeaking = false;
+                    if (result == 'end')
+                      this.isSpeaking = false;
                     // console.log('Result', result);
                 },
                 (error) => {
