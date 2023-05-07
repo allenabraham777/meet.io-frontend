@@ -15,7 +15,7 @@
     "build:orig": "vue-cli-service build --target lib --name myLib src/lib/CustomButton.vue"
   },
   "dependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^8.0.0",
     "rxjs": "^6.3.3",
     "sass-loader": "^8.0.2",
     "travis": "^0.1.1",
